@@ -3,6 +3,27 @@
     <head>
         <meta charset="utf-8">
         <title>Vedic Astrology: Yoga Calculator</title>
+        <!-- src: https://stackoverflow.com/questions/8282026/how-to-limit-google-autocomplete-results-to-city-and-country-only -->
+        <!--
+        <script src="https://maps.googleapis.com/maps/api/js?key=***REMOVED***&sensor=false&libraries=places" type="text/javascript"></script>
+        <script type="text/javascript">
+            function initialize() {
+                var input = document.getElementById('blocation');
+                var options = {
+                    types: ['geocode']
+                };
+                var autocomplete = new google.maps.places.Autocomplete(input, options);
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        -->
+        <script type="text/javascript">
+            function test() {
+                window.location.href='chart.html/', true;
+                return false;
+                //location.href='en.wikipedia.org';
+            }
+        </script>
     </head>
     <body>
         <h1>Yoga Calculator</h1>
@@ -15,7 +36,10 @@
             <input type="date" data-date-inline-picker="true" id="bdate" name="bdate"><br>
             <label for="btime">Birth time (HH:MM AM/PM):</label><br>
             <input type="time" id="btime" name="btime"><br>
-            <input type="submit" value="Submit">
+            <!-- <input type="text" id="blocation" name="blocation"><br> -->
+            <!-- On click: send the data to a node JS server to process the
+            data. Redirect to a page showing the birth chart. -->
+            <button type="submit" onclick="test()">Submit</button>
         </form>
     </body>
 </html>
