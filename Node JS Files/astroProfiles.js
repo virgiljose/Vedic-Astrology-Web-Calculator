@@ -16,7 +16,7 @@ class Profile {
      * Constructor parameters: Name (string), DOB (formatted HTML string), 
      * TOB (formatted HTML string), and location (tuple of coordinates)
     */
-    constructor(name, dob, tob, location) {
+    constructor(name, dob, tob, location={latitude: 0, longitude: 0}) {
         // Name
         this.name = name;
         // Date of birth
@@ -100,6 +100,8 @@ function parseTime(time) {
 // console.log(nakshatras.length);
 // test = new Profile("Jane Lee", "02-02-2002", "19:19", 'Russia');
 // console.log(test);
+
+module.exports = { Profile };
 
 var test = {latitude: ***REMOVED***, longitude: ***REMOVED***};
 var t = new Profile('VF',
