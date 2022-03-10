@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <head>
     <title>Your Birth Chart</title>
+    <script src="./NodeJSFiles/scripts/drawChart.js" type="text/javascript"></script>
+    <!--
+    <script>
+        function draw() {
+            var c = document.getElementById("birthChart");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+    </script>
+    -->
 </head>
-<body>
-    <h1>In development</h1>
+<body onload="draw()">
+    <h1>Birth chart</h1>
+    <canvas width="1000" height="800" id="birthChart"></canvas>
+    <h2>Yoga Details</h2>
+    <p>In development</p>
 </body>
