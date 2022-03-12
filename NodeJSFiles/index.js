@@ -27,14 +27,10 @@ var currProfile; // Store astrological profile from most recent request
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../')));
 
-// Handles chart data calculations
+// Submit birth information to the server
 app.post('/chartdata', (req, res) => {
-
+  
     currProfile = new astroProfiles.Profile(req.body.name, req.body.bdate, req.body.btime);
-    console.log(stringify(currProfile));
-    // TODO: Perform additional astrological calculations
-
-    // TODO: Draw birth chart
 
     /**
      * Redirect user to chart.html (the page that displays their birth chart).
@@ -43,8 +39,14 @@ app.post('/chartdata', (req, res) => {
      res.sendFile(path.join(__dirname, '../chart.html'));
 });
 
+// Retrieve the currProfile variable
+app.get('/currProfile/', function(req, res){
+    res.send(currProfile);
+ });
+
+
 const port = PORT;
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+    console.log(`Server running on port ${port}`);
 });

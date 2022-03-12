@@ -1,7 +1,3 @@
-// Handles the planetary objects
-// Only handles location of objects - does NOT handle conditions (e.g. 
-// planeetary dignities, yogas, etc)
-
 // Import swisseph  allows for ephemeris calculaions
 // Credit: https://github.com/mivion/swisseph
 var swisseph = require('swisseph');
@@ -72,11 +68,8 @@ class OtherObject extends AstroObject {
     constructor(degrees, lagna) {
         super(degrees);
 
-        this.house = undefined;
-
         this.houseNum = (this.sign - lagna.sign)%12 + 1;
         if(this.houseNum < 1) this.houseNum += 12;
-
 
         this.ownSign = false;
         this.exalted = false;
@@ -226,7 +219,7 @@ class House {
         for(var key of Object.keys(astroObjContainer)) {
             if(astroObjContainer[key]['houseNum'] == houseNum) { 
                 this.astroObjectList.push(astroObjContainer[key]);
-                astroObjContainer[key]['house'] = this;
+                // astroObjContainer[key]['house'] = this;
             }
         }
     }
