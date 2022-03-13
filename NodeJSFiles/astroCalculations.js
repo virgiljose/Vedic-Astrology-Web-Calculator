@@ -72,13 +72,13 @@ function calcParivartana(astroData, houseData) {
 module.exports = { calcParivartana };
 
 // Testing functionality
-var test = {latitude: ***REMOVED***, longitude: ***REMOVED***};
-var astroObjectData = astroObjects.createAstroData(
-    ***REMOVED***,
-    ***REMOVED***, 
-    test.latitude,
-    test.longitude
-);
+// var test = {latitude: ***REMOVED***, longitude: ***REMOVED***};
+// var astroObjectData = astroObjects.createAstroData(
+//     ***REMOVED***,
+//     ***REMOVED***, 
+//     test.latitude,
+//     test.longitude
+// );
 //console.log(astroObjectData);
-calcParivartana(astroObjectData['astroObjContainer'], astroObjectData['hContainer']);
+// calcParivartana(astroObjectData['astroObjContainer'], astroObjectData['hContainer']);
 //console.log(astroObjectData['hContainer']);

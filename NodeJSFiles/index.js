@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, '../')));
 // Submit birth information to the server
 app.post('/chartdata', (req, res) => {
   
-    currProfile = new astroProfiles.Profile(req.body.name, req.body.bdate, req.body.btime);
+    currProfile = JSON.stringify(new astroProfiles.Profile(req.body.name, req.body.bdate, req.body.btime));
 
     /**
      * Redirect user to chart.html (the page that displays their birth chart).

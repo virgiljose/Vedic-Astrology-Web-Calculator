@@ -103,10 +103,10 @@ function parseTime(time) {
 
 module.exports = { Profile };
 
-var test = {latitude: ***REMOVED***, longitude: ***REMOVED***};
-var t = new Profile('VF',
-    ***REMOVED***,
-    ***REMOVED***, 
-    test
-);
-console.log(t);
+// var test = {latitude: ***REMOVED***, longitude: ***REMOVED***};
+// var t = new Profile('VF',
+//     ***REMOVED***,
+//     ***REMOVED***, 
+//     test
+// );
+// console.log(t);

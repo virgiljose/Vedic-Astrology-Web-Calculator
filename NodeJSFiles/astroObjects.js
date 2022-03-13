@@ -41,6 +41,8 @@ function adjustDegrees(degrees) {
 class AstroObject {
     constructor(degrees) {
         this.objID = -1;
+
+        this.objSymbol = "Ao";
         // Degrees of the Astrological object (out of 366)
         this.degrees = degrees;
         // Sign of the astrological object
@@ -58,6 +60,7 @@ class Lagna extends AstroObject {
     constructor(degrees) {
         super(degrees);
         this.objID = enums.OBJ_ID_LAGNA;
+        this.objSymbol = "La";
     }
 };
 
@@ -82,6 +85,7 @@ class Rahu extends LunarNode {
     constructor(degrees, lagna) {
         super(degrees, lagna);
         this.objID = enums.OBJ_ID_RAHU;
+        this.objSymbol = "Ra";
         if (this.sign == enums.SIGN_ID_AQUARIUS) {
             this.ownSign = true; 
         }
@@ -93,6 +97,7 @@ class Ketu extends LunarNode {
     constructor(degrees, lagna) {
         super(degrees, lagna);
         this.objID = enums.OBJ_ID_KETU;
+        this.objSymbol = "Ke";
         if (this.sign == enums.SIGN_ID_SCORPIO) {
             this.ownSign = true; 
         }
@@ -107,6 +112,7 @@ class Sun extends Luminary {
     constructor(degrees, lagna) {
         super(degrees, lagna);
         this.objID = enums.OBJ_ID_SUN;
+        this.objSymbol = "Su";
         if (this.sign == enums.SIGN_ID_LEO) { this.ownSign = true; }
         if (this.sign == enums.SIGN_ID_ARIES) { this.exalted = true; }
         if (this.sign == enums.SIGN_ID_LIBRA) { this.debilitated = true; }
@@ -116,6 +122,7 @@ class Moon extends Luminary {
     constructor(degrees, lagna) {
         super(degrees, lagna);
         this.objID = enums.OBJ_ID_MOON;
+        this.objSymbol = "Mo";
         if (this.sign == enums.SIGN_ID_CANCER) { this.ownSign = true; }
         if (this.sign == enums.SIGN_ID_TAURUS) { this.exalted = true; }
         if (this.sign == enums.SIGN_ID_SCORPIO) { this.debilitated = true; }
@@ -133,6 +140,7 @@ class Mercury extends Planet {
     constructor(degrees, lagna, rx) {
         super(degrees, lagna, rx);
         this.objID = enums.OBJ_ID_MERCURY;
+        this.objSymbol = "Me";
         if (this.sign == enums.SIGN_ID_GEMINI || this.sign == enums.SIGN_ID_VIRGO) { 
             this.ownSign = true; 
         }
@@ -145,6 +153,7 @@ class Venus extends Planet {
     constructor(degrees, lagna, rx) {
         super(degrees, lagna, rx);
         this.objID = enums.OBJ_ID_VENUS;
+        this.objSymbol = "Ve";
         if (this.sign == enums.SIGN_ID_TAURUS || this.sign == enums.SIGN_ID_LIBRA) {
             this.ownSign = true; 
         }
@@ -156,6 +165,7 @@ class Mars extends Planet {
     constructor(degrees, lagna, rx) {
         super(degrees, lagna, rx);
         this.objID = enums.OBJ_ID_MARS;
+        this.objSymbol = "Ma";
         if (this.sign == enums.SIGN_ID_ARIES || this.sign == enums.SIGN_ID_SCORPIO) { 
             this.ownSign = true; 
         }
@@ -167,6 +177,7 @@ class Jupiter extends Planet {
     constructor(degrees, lagna, rx) {
         super(degrees, lagna, rx);
         this.objID = enums.OBJ_ID_JUPITER;
+        this.objSymbol = "Ju";
         if (this.sign == enums.SIGN_ID_SAGITTARIUS || this.sign == enums.SIGN_ID_PISCES) { 
             this.ownSign = true; 
         }
@@ -178,6 +189,7 @@ class Saturn extends Planet {
     constructor(degrees, lagna, rx) {
         super(degrees, lagna, rx);
         this.objID = enums.OBJ_ID_SATURN;
+        this.objSymbol = "Sa";
         if (this.sign == enums.SIGN_ID_CAPRICORN || this.sign == enums.SIGN_ID_AQUARIUS) { 
             this.ownSign = true; 
         }
