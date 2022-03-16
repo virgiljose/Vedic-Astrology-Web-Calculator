@@ -1,4 +1,5 @@
 var astroObjects = require('./astroObjects');
+var astroCalculations = require('./astroCalculations');
 
 /** 
  * Astrological Profile
@@ -32,6 +33,7 @@ class Profile {
         var astroData = astroObjects.createAstroData(this.dob, this.tob, this.location.latitude, this.location.latitude);
         this.astroObjectData = astroData['astroObjContainer'];
         this.houseData = astroData['hContainer'];
+        this.yogaData = new astroCalculations.YogaContainer(this.astroObjectData, this.houseData);
     }
 
     name(name) {
@@ -95,18 +97,4 @@ function parseTime(time) {
     }
 }
 
-// Testing
-// console.log(signs[calculateSign(-15)]);
-// console.log(nakshatras.length);
-// test = new Profile("Jane Lee", "02-02-2002", "19:19", 'Russia');
-// console.log(test);
-
 module.exports = { Profile };
-
-// var test = {latitude: ***REMOVED***, longitude: ***REMOVED***};
-// var t = new Profile('VF',
-//     ***REMOVED***,
-//     ***REMOVED***, 
-//     test
-// );
-// console.log(t);

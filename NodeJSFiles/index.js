@@ -13,12 +13,8 @@ const path = require('path'); // To retrieve file paths
 
 /** External files from project */
 const astroProfiles = require('./astroProfiles');
-const { astroObjects } = require('./enums');
 
 const PORT = 8080;
-
-// https://www.educative.io/edpresso/what-is-typeerror-converting-circular-structure-to-json
-const {parse, stringify} = require('flatted/cjs');
 
 const app = express(); // Initialize express server
 
@@ -42,6 +38,11 @@ app.post('/chartdata', (req, res) => {
 // Retrieve the currProfile variable
 app.get('/currProfile/', function(req, res){
     res.send(currProfile);
+ });
+
+ // Redirect back to home page
+ app.get('/home/', function(req, res){
+    res.sendFile(path.join(__dirname, '../home.html'));
  });
 
 

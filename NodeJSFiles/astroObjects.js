@@ -7,8 +7,7 @@ swisseph.swe_set_ephe_path(__dirname + '/../ephe');
 var enums = require('./enums');
 
 // Handles HTTP requests. Used to find time zone using Google Time Zone API
-var axios = require('axios');
-
+//var axios = require('axios');
 
 // Calculate the ruler of a given sign
 const calculateSignRuler = sign => enums.signToRuler[sign];

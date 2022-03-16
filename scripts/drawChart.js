@@ -50,6 +50,7 @@ async function getProfile() {
 
 // Create house boundaries (North Indian style)
 function drawLines(ctx) {
+    ctx.lineWidth = 1;
     ctx.moveTo(0, 0);
     ctx.lineTo(WIDTH, HEIGHT);
     ctx.moveTo(0, HEIGHT);
@@ -64,13 +65,14 @@ function drawLines(ctx) {
     ctx.lineTo(WIDTH, HEIGHT/2);
     ctx.moveTo(WIDTH, HEIGHT/2);
     ctx.lineTo(WIDTH/2, 0);
+    ctx.stroke();
 
+    ctx.lineWidth = 4;
     ctx.moveTo(0, 0);
     ctx.lineTo(0, HEIGHT);
     ctx.lineTo(WIDTH, HEIGHT);
     ctx.lineTo(WIDTH, 0);
     ctx.lineTo(0, 0);
-    
     ctx.stroke();
 }
 

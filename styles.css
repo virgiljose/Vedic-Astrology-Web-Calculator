@@ -1,0 +1,18 @@
+#top {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1, h2, h3 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+p, label {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button {
+    background-color: #bd8dc7;
+    border-radius: 20%;
+    border: none;
+}
