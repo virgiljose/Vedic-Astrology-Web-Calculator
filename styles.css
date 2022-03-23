@@ -3,6 +3,15 @@
     margin-right: 10%;
 }
 
+#form {
+    display: flex;
+}
+
+#formElement {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 h1, h2, h3 {
     font-family: Helvetica, Arial, sans-serif;
 }

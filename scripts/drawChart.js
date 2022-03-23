@@ -88,8 +88,6 @@ function drawObjs(profile, ctx) {
         var astroObjs = profile.houseData[String(i+1)].astroObjectList;
         var numObjs = astroObjs.length;
 
-        //if(numObjs) { console.log(profile.houseData[String(i+1)].astroObjectList[0].objSymbol) };
-
         // Determine the position of the first planet in the chart
         startOffset = Math.min(numObjs,5)*OFFSET/3;
         startOffset2nd = (numObjs - 5)*OFFSET/3;
